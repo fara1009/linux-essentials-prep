@@ -1,28 +1,28 @@
-# Linux Essentials — подготовка к экзамену
+# Linux Essentials — Exam Preparation
 
-**[Открыть публичный сайт](https://linux-essentials-13-18-prep.eleganthobby.chatgpt.site/)** — можно пользоваться с телефона и делиться ссылкой.
+**[Open the public study website](https://linux-essentials-13-18-prep.eleganthobby.chatgpt.site/)** — mobile friendly and available without signing in.
 
-Учебный сайт на русском языке по урокам 13–18 NDG Linux Essentials. Все шесть конспектов перенесены полностью: 198 разделов, команды с описаниями и примерами вывода.
+Complete English study notes for NDG Linux Essentials lessons 13–18: 198 sections with theory, commands, descriptions, examples, and sample output.
 
-- Отдельная страница для каждого урока.
-- 180 вопросов с перемешиванием тем и вариантов ответа, объяснениями, режимами тренировки и экзамена.
-- 350 карточек для самопроверки.
-- Поиск по конспектам, справочник терминальных примеров, повторение ошибок.
-- Прогресс хранится локально в браузере каждого посетителя.
-- Адаптивная версия для телефонов, печать и скачивание конспектов.
+- One numbered page for each lesson.
+- 180 quiz questions with shuffled topics and answers, explanations, practice and exam modes.
+- 350 self-check flashcards.
+- Full-text search, command examples, and a separate review list for mistakes.
+- Progress is saved locally in each visitor’s browser.
+- Responsive layout, printable lessons, and downloadable complete notes.
 
-## Уроки
+## Lessons
 
-13. Где хранятся данные: процессы, память, журналы и файловая иерархия.
-14. Настройка сети: IP, маршрутизация, DNS и SSH.
-15. Безопасность системы и пользователей.
-16. Создание пользователей и групп.
-17. Владение и права доступа.
-18. Специальные каталоги и файлы: специальные биты, inode и ссылки.
+13. Where Data Is Stored: processes, memory, logs, and the file-system hierarchy.
+14. Network Configuration: IP, routing, DNS, and SSH.
+15. System and User Security.
+16. Creating Users and Groups.
+17. Ownership and Permissions.
+18. Special Directories and Files: special permission bits, inodes, and links.
 
-## Запуск локально
+## Run locally
 
-Нужен Node.js. Внешние зависимости не требуются.
+Node.js is required. No external dependencies are needed.
 
 ```sh
 node build.mjs
@@ -30,17 +30,17 @@ node verify.mjs
 node server.mjs
 ```
 
-Открыть http://localhost:4173/. Для остановки сервера — Ctrl+C.
+Open http://localhost:4173/. Stop the server with Ctrl+C.
 
-## Файлы
+## Source files
 
-- `content/lessons.json` — полные тексты конспектов.
-- `content/questions.txt` — банк тестовых вопросов с объяснениями.
-- `build.mjs` — сборка страниц, карточек и поискового индекса в `dist/`.
-- `app.mjs` — интерфейс, поиск, квизы и сохранение прогресса.
-- `engine.mjs` — перемешивание, равномерный выбор вопросов и подсчёт результата.
-- `verify.mjs` — проверка сохранности текстов, примеров, вопросов, ссылок и логики квизов.
+- `content/lessons.json`: complete English lesson notes.
+- `content/questions.txt`: quiz questions, choices, and explanations.
+- `build.mjs`: generates pages, flashcards, and search indexes in `dist/`.
+- `app.mjs`: interface, search, quizzes, and local progress.
+- `engine.mjs`: shuffling, balanced sampling, and grading.
+- `verify.mjs`: validates complete notes, examples, questions, links, and quiz logic.
 
-Для размещения на статическом хостинге нужно загрузить содержимое `dist/` в корень сайта. Сайт использует пути от корня домена.
+To use static hosting, upload the contents of `dist/` to the domain root. The site uses root-relative paths.
 
-Учебные примеры команд не выполняются на сайте. Ссылки на использованные справочные материалы сохранены в конспектах.
+Command examples are educational and are not executed by the website. Reference links are retained in the lesson notes.

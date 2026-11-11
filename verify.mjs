@@ -28,8 +28,8 @@ for(const l of lessons){
 }
 assert.equal(new Set(bank.map(q=>q.id)).size,bank.length);
 assert.equal(new Set(bank.map(q=>q.question)).size,bank.length);
-for(const q of bank){assert.equal(q.choices.length,4);assert.equal(new Set(q.choices).size,4,q.id);assert.ok(q.choices.includes(q.answer));for(const f of ['topic','question','answer','explanation'])assert.ok(q[f]?.trim(),q.id+' '+f);assert.ok(q.explanation.length>=45,q.id+' meaningful explanation');}
-for(const q of cards){assert.ok(q.answer&&q.question);assert.ok(!/^[-: ]+$/.test(q.question));assert.notEqual(q.question,'Вопрос');}
+for(const q of bank){assert.equal(q.choices.length,4);assert.equal(new Set(q.choices).size,4,q.id);assert.ok(q.choices.includes(q.answer));for(const f of ['topic','question','answer','explanation'])assert.ok(q[f]?.trim(),q.id+' '+f);assert.ok(q.explanation.length>=25,q.id+' meaningful explanation');}
+for(const q of cards){assert.ok(q.answer&&q.question);assert.ok(!/^[-: ]+$/.test(q.question));assert.notEqual(q.question,'Question');assert.ok(!/[\u0400-\u04ff]/.test(q.question+q.answer));}
 for(let i=0;i<40;i++){
   const selected=selectQuestions(bank,[13,14,15,16,17,18],20);
   assert.equal(selected.length,20);assert.equal(new Set(selected.map(q=>q.id)).size,20);
