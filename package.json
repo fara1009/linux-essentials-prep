@@ -1,0 +1,6 @@
+{
+  "name": "linux-essentials-prep",
+  "private": true,
+  "type": "module",
+  "scripts": {"build":"node build.mjs","test":"node verify.mjs","start":"node server.mjs"}
+}
